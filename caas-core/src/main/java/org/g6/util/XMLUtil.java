@@ -2,7 +2,10 @@ package org.g6.util;
 
 
 import com.google.common.io.Resources;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.apache.commons.digester3.binder.DigesterLoader;
+import org.apache.commons.digester3.xmlrules.FromXmlRulesModule;
 import org.g6.caas.exception.CaaSRuntimeException;
 
 import static org.apache.commons.digester3.binder.DigesterLoader.newLoader;
@@ -27,4 +30,22 @@ public class XMLUtil {
                     + xmlFile + " with rule files:" + ruleFiles, e);
         }
     }
+
+    @Data
+    @NoArgsConstructor
+    private static class CaaSXMLRuleModule extends FromXmlRulesModule {
+        String[] xmlFiles;
+
+        CaaSXMLRuleModule(String[] xmlFiles) {
+            this.xmlFiles = xmlFiles;
+        }
+
+        @Override
+        protected void loadRules() {
+            for (String xml : xmlFiles) {
+                loadXMLRules(Resources.getResource(xml));
+            }
+        }
+    }
+
 }
