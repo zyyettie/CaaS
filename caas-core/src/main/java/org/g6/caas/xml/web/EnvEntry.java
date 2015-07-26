@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class EnvEntry {
     private String description;
-    private String namme;
+    private String name;
     private String value;
     private String type;
 }

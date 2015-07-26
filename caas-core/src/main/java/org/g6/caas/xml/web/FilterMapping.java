@@ -8,9 +8,9 @@ import java.util.List;
 @Data
 public class FilterMapping {
     private String name;
-    private List<String> urlPatterns;
+    private List<UrlPattern> urlPatterns;
 
-    public void addUrlPattern(String urlPattern) {
+    public void addUrlPattern(UrlPattern urlPattern) {
         if (urlPatterns == null)
             urlPatterns = new ArrayList<>();
         urlPatterns.add(urlPattern);

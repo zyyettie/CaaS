@@ -25,6 +25,11 @@ public class WebApp {
     private List<ServletMapping> servletMappings;
     private List<ErrorPage> errorPages;
 
+    private SessionConfig sessionConfig;
+    private WelcomeFileList welcomeFileList;
+    private JspConfig jspConfig;
+    private EnvEntry envEntry;
+
     public void addContextParam(ContextParam param){
         if(contextParams == null)
             contextParams = new ArrayList<>();
@@ -38,6 +43,7 @@ public class WebApp {
 
         mimeMappings.add(mimeMapping);
     }
+
     public void addFilter(Filter filter){
         if(filters == null)
             filters = new ArrayList<>();
@@ -69,7 +75,7 @@ public class WebApp {
 
         servletMappings.add(servletMapping);
     }
-    public void addServlet(ErrorPage errorPage){
+    public void addErrorPage(ErrorPage errorPage){
         if(errorPages == null)
             errorPages = new ArrayList<>();
 

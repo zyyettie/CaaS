@@ -8,9 +8,9 @@ import java.util.List;
 @Data
 public class ServletMapping {
     private String name;
-    private List<String> urlPatterns;
+    private List<UrlPattern> urlPatterns;
 
-    public void addUrlPattern(String pattern){
+    public void addUrlPattern(UrlPattern pattern){
         if(urlPatterns == null)
             urlPatterns = new ArrayList<>();
         urlPatterns.add(pattern);

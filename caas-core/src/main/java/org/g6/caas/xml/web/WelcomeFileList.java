@@ -7,9 +7,9 @@ import java.util.List;
 
 @Data
 public class WelcomeFileList {
-    private List<String> fileList;
+    private List<WelcomeFile> fileList;
 
-    public void addWelcomeFile(String file){
+    public void addWelcomeFile(WelcomeFile file){
         if(fileList == null)
             fileList = new ArrayList<>();
 
