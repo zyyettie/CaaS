@@ -7,5 +7,5 @@ package org.g6.caas.xml.web;
  * Time: 1:46 PM
  * To change this template use File | Settings | File Templates.
  */
-public class T {
+public class JspConfig {
 }
