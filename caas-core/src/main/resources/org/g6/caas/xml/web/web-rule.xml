@@ -134,7 +134,6 @@
 
             <set-next-rule methodname="setJspConfig"/>
         </pattern>
-
         <pattern value="env-entry">
             <object-create-rule classname="org.g6.caas.xml.web.EnvEntry"/>
             <bean-property-setter-rule pattern="env-entry-name" propertyname="name"/>

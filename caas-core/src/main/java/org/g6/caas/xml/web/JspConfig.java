@@ -8,7 +8,7 @@ import java.util.List;
 @Data
 public class JspConfig {
     private List<Taglib> taglibs;
-    private JspPropertyGroup group;
+    private JspPropertyGroup jspPropertyGroup;
 
     public void addTaglib(Taglib tag) {
         if (taglibs == null)

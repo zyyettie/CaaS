@@ -22,7 +22,7 @@ public class XMLUtil {
         try {
             return loader.newDigester().parse(Resources.getResource(xmlFile));
         } catch (Exception e) {
-            String ruleFiles = null;
+            String ruleFiles = "";
             for (String rule : rules) {
                 ruleFiles += rule + ",";
             }
