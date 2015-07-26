@@ -1,11 +1,19 @@
 package org.g6.caas.xml.web;
 
-/**
- * Created with IntelliJ IDEA.
- * User: jili
- * Date: 7/26/15
- * Time: 1:46 PM
- * To change this template use File | Settings | File Templates.
- */
+import lombok.Data;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Data
 public class JspConfig {
+    private List<Taglib> taglibs;
+    private JspPropertyGroup group;
+
+    public void addTaglib(Taglib tag) {
+        if (taglibs == null)
+            taglibs = new ArrayList<>();
+        String test= "";
+        taglibs.add(tag);
+    }
 }
