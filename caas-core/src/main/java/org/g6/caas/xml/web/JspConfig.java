@@ -13,7 +13,7 @@ public class JspConfig {
     public void addTaglib(Taglib tag) {
         if (taglibs == null)
             taglibs = new ArrayList<>();
-        String test= "";
+
         taglibs.add(tag);
     }
 }
